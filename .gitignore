@@ -1,0 +1,46 @@
+# --- Secrets / credentials ---
+.env
+.env.*
+*.pem
+*.key
+riot_api_key.txt
+
+# --- Terraform ---
+terraform/**/.terraform/
+terraform/**/*.tfstate
+terraform/**/*.tfstate.*
+terraform/**/.terraform.lock.hcl
+terraform/**/*.tfvars
+!terraform/**/*.tfvars.example
+crash.log
+crash.*.log
+
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.venv/
+venv/
+env/
+*.egg
+.pytest_cache/
+
+# --- Node / React frontend ---
+node_modules/
+frontend/build/
+frontend/dist/
+.npm/
+
+# --- Docker ---
+*.dockerignore.local
+
+# --- OS / editor junk ---
+.DS_Store
+Thumbs.db
+.vscode/
+*.swp
+
+# --- Local data / raw pulls (never commit real match data or logs) ---
+src/ingestion/data/
+*.log
