@@ -1,0 +1,8 @@
+# Copy this file to terraform.tfvars and fill in real values.
+# terraform.tfvars is gitignored - never commit it.
+
+aws_region                  = "us-east-1"
+project_name                = "round-zero"
+alert_email                 = "you@example.com"
+monthly_budget_usd          = 20
+billing_alarm_threshold_usd = 15
