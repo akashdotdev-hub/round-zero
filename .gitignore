@@ -9,7 +9,6 @@ riot_api_key.txt
 terraform/**/.terraform/
 terraform/**/*.tfstate
 terraform/**/*.tfstate.*
-terraform/**/.terraform.lock.hcl
 terraform/**/*.tfvars
 !terraform/**/*.tfvars.example
 crash.log
