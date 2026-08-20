@@ -42,4 +42,5 @@ Thumbs.db
 
 # --- Local data / raw pulls (never commit real match data or logs) ---
 src/ingestion/data/
+src/ingestion/processed_data/
 *.log
