@@ -47,10 +47,10 @@ round-zero/
 
 | # | Milestone | Status |
 |---|---|---|
-| 1 | Cost guardrails (Terraform budget + billing alarm) | ⬜ not started |
-| 2 | Ingestion working locally against Riot API | ⬜ not started |
-| 3 | Storage wired up (DynamoDB) | ⬜ not started |
-| 4 | Processing + rule-based coaching logic | ⬜ not started |
+| 1 | Cost guardrails (Terraform budget + billing alarm) | ✅ done |
+| 2 | Ingestion working locally against Riot API | ✅ done |
+| 3 | Storage wired up (DynamoDB) | ✅ done |
+| 4 | Processing + rule-based coaching logic | ✅ done|
 | 5 | API layer (API Gateway + Lambda) | ⬜ not started |
 | 6 | Dashboard (React) | ⬜ not started |
 | 7 | CI/CD (Jenkins) | ⬜ not started |
