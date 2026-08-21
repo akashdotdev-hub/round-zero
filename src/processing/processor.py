@@ -4,6 +4,7 @@ from pathlib import Path
 from coaching_rules import (
     evaluate_agent_rules,
     evaluate_overall_rules,
+    evaluate_map_rules,
 )
 
 
@@ -206,11 +207,12 @@ def main():
         print(f"  Average Damage: {stats['average_damage']:.2f}")
 
     overall_insights = evaluate_overall_rules(overall_stats)
-    agent_insights = evaluate_agent_rules(agent_stats) 
+    agent_insights = evaluate_agent_rules(agent_stats)
+    map_insights = evaluate_map_rules(map_stats) 
 
     print("\n=== Coaching Insights ===")
 
-    all_insights = overall_insights + agent_insights
+    all_insights = (overall_insights+ agent_insights+ map_insights)
 
     if not all_insights:
         print("No coaching rules triggered.")
