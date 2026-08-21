@@ -87,3 +87,36 @@ def evaluate_agent_rules(agent_stats):
             })
 
     return insights
+
+def evaluate_map_rules(map_stats):
+    """Evaluate map-specific coaching rules."""
+
+    insights = []
+
+    for map_name, stats in map_stats.items():
+
+        # Require at least two matches before
+        # making a map-specific recommendation.
+        if stats["matches"] < 2:
+            continue
+
+        if stats["kd_ratio"] < 1.0:
+            insights.append({
+                "rule_id": "MAP_LOW_PERFORMANCE",
+                "category": "map",
+                "severity": "medium",
+                "map": map_name,
+                "evidence": {
+                    "matches": stats["matches"],
+                    "kd_ratio": round(
+                        stats["kd_ratio"],
+                        2,
+                    ),
+                },
+                "recommendation": (
+                    f"Review positioning and engagement "
+                    f"decisions on {map_name}."
+                ),
+            })
+
+    return insights
